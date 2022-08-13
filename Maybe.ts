@@ -33,9 +33,9 @@ class Maybe<T> {
     return f(this._ref);
   }
 
-  match<U>({ just, nothing }: {
-    just: (t: T) => U,
-    nothing: () => U
+  match({ just, nothing }: {
+    just: (t: T) => void,
+    nothing: () => void
   }) {
     if (this._ref) return just(this._ref);
     return nothing();
