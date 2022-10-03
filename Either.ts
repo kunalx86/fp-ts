@@ -6,7 +6,7 @@ type Right<T> = {
   value: T;
 }
 
-type _Either<T> = Left | Right<T>
+export type _Either<T> = Left | Right<T>
 
 class Either<T> {
   private _ref: _Either<T>;
